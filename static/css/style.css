@@ -1,0 +1,738 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f5f2;
+    color: #333;
+}
+
+/* Área do topo — menu fixo, sempre visível ao rolar a página */
+header {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.header-index {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 15px;
+
+    background-color: white;
+    border-radius: 50px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+.menu a {
+    text-decoration: none;
+    color: #333;
+
+    padding: 10px 20px;
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+/* Quando passar o mouse */
+.menu a:hover {
+    background-color: #333;
+    color: white;
+}
+
+/*menu página inicial*/
+.menu-index {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 15px;
+
+    background-color: white;
+    border-radius: 50px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+.menu-index a {
+    text-decoration: none;
+    color: #333;
+
+    padding: 10px 20px;
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+/* Quando passar o mouse */
+.menu-index a:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Conteúdo principal */
+
+main {
+    width: 100%;
+
+    /* Espaço para não ficar escondido atrás do menu fixo */
+    padding-top: 90px;
+}
+
+
+/* página sobre mim */
+
+.secao-apresentacao {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 80px;
+
+    padding: 100px 10%;
+}
+
+.apresentacao-texto {
+    max-width: 500px;
+}
+
+.apresentacao-texto p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.apresentacao-texto h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.apresentacao-imagem img {
+    width: 350px;
+    height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+/* Botão */
+
+.botao {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 12px 25px;
+
+    background-color: #333;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    transition: 0.3s ease;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+}
+
+
+/* seções*/
+
+.secao {
+    min-height: 100vh;
+
+    padding: 120px 10%;
+}
+
+/* Página ainda sem conteúdo (ex.: portfolio.html) */
+.secao-vazia {
+    min-height: 20vh;
+}
+
+
+/* Título da seção */
+
+.titulo-secao {
+    text-align: center;
+    display: flex;    
+    align-items: flex-start;
+    justify-content:space-around;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.titulo-secao h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.titulo-secao p {
+    font-size: 18px;
+    margin-bottom: 15px
+}
+
+p {
+    text-align: justify;
+}
+
+/* cards*/
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+
+/* Card individual */
+
+.card {
+    background-color: #e1e0dc;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* Imagem do card */
+
+.card img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+}
+
+
+/* Conteúdo */
+
+.card-conteudo {
+    padding: 20px;
+}
+
+.card h3 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.card p {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* leia mais */
+
+.card-conteudo a {
+    color: #333;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.card-conteudo a:hover {
+    text-decoration: underline;
+}
+
+
+/* outros projetos*/
+
+.lista-projetos {
+    display: flex;
+    flex-direction: column;
+
+    gap: 80px;
+}
+
+
+/* Cada projeto ocupa a seção inteira, dividido ao meio entre
+   imagem e texto */
+
+.projeto {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 60px;
+}
+
+
+.projeto:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+
+.projeto-imagem {
+    flex: 1 1 50%;
+
+    padding: 20px;
+}
+
+.projeto-imagem img {
+    display: block;
+
+    width: 100%;
+    height: 340px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.projeto-texto {
+    flex: 1 1 50%;
+
+    padding: 20px;
+}
+
+.projeto-texto h3 {
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+.projeto-texto p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+
+/* Telas estreitas: empilha sempre imagem em cima e texto embaixo,
+   independente do projeto ser par ou ímpar */
+
+@media (max-width: 900px) {
+
+    .lista-projetos {
+        gap: 50px;
+    }
+
+    .projeto,
+    .projeto:nth-child(even) {
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .projeto-imagem,
+    .projeto-texto {
+        padding: 0;
+    }
+
+    .projeto-imagem img {
+        height: 240px;
+    }
+
+}
+
+
+/* rodapé */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background-color: #333;
+    color: white;
+}
+
+
+
+/* Carossel */
+
+.carrossel {
+    width: 100%;
+    max-width: 1360px;
+    margin: auto;
+
+    background-color: #e1e0dc;
+
+    padding: 64px;
+
+    border-radius: 20px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.carrossel-janela {
+    width: 100%;
+
+    overflow: hidden;
+}
+
+
+/* linha dos cards */
+
+.cards-carrosel {
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: nowrap;
+
+    gap: 40px;
+
+    width: max-content;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* card */
+
+.card-carrosel {
+    flex: 0 0 auto;
+
+    background-color: #e1e0dc;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    padding-bottom: 18px;
+
+    transition: 0.3s ease;
+}
+
+.card-carrosel:hover {
+    transform: translateY(-8px);
+}
+
+
+/* imagem */
+
+.card-carrosel img {
+    display: block;
+
+    width: 100%;
+
+    height: 218px;
+
+    object-fit: cover;
+}
+
+
+/* twxto embaixo */
+
+.card-carrosel h3 {
+    margin: 18px 20px 0;
+
+    color: #282829;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 21px;
+
+    font-weight: normal;
+
+    line-height: 1.8;
+}
+
+
+.seta {
+    position: absolute;
+
+    top: 43%;
+
+    transform: translateY(-50%);
+
+    z-index: 2;
+
+    background: transparent;
+
+    border: none;
+
+    color: #bdbbb2;
+
+    font-size: 60px;
+
+    cursor: pointer;
+
+    transition: color 0.2s;
+}
+
+.seta:hover {
+    color: #282829;
+}
+
+
+.anterior {
+    left: 18px;
+}
+
+
+.proxima {
+    right: 18px;
+}
+
+
+.bolinhas {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-top: 42px;
+}
+
+.bolinha {
+    width: 12px;
+
+    height: 12px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #9aa9ab;
+
+    cursor: pointer;
+}
+
+.bolinha.ativa {
+    background-color: #282829;
+}
+
+
+/* responsividade pro celular */
+
+@media (max-width: 700px) {
+
+    .carrossel {
+        padding: 30px;
+    }
+
+    .cards-carrosel {
+        gap: 20px;
+    }
+
+    .card-carrosel {
+        flex: 0 0 auto;
+    }
+
+    .card-carrosel img {
+        height: 220px;
+    }
+
+    .card-carrosel h3 {
+        margin: 15px 15px 0;
+
+        font-size: 17px;
+    }
+
+    .seta {
+        font-size: 40px;
+    }
+
+    .anterior {
+        left: 5px;
+    }
+
+    .proxima {
+        right: 5px;
+    }
+
+}
+
+/* Telas médias: 2 cards por linha */
+@media (max-width: 1100px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+    .menu {
+        gap: 2px;
+    }
+
+    .menu a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .header-index {
+        top: auto;      /* Remove a fixação do topo */
+        bottom: 20px;   /* Joga o menu para baixo (mude para 0 se quiser colado na borda) */
+    }
+
+    main {
+        padding-top: 0;    /* Remove o grande espaço do topo no celular */
+        padding-bottom: 90px; /* Adiciona espaço no fundo para o texto não sumir atrás do menu */
+    }
+    
+    
+    .menu-index {
+        gap: 2px;
+    }
+
+    .menu-index a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .titulo-secao {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .secao-apresentacao {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 40px;
+    }
+
+    .apresentacao-texto h1 {
+        font-size: 45px;
+        text-align: left;
+    }
+
+
+    .apresentacao-imagem {
+        order: -1;
+    }
+
+    .apresentacao-imagem img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
+
+.menu a.ativo {
+    background-color: #333;
+    color: white;
+}
+
+
+/* introdução coleções e portifólio*/
+
+.secao-intro-colecao,
+.secao-intro-portfolio {
+    padding: 60px 10% 20px;
+}
+
+.secao-intro-colecao .titulo-secao,
+.secao-intro-portfolio .titulo-secao {
+    margin-bottom: 0;
+
+    /* Título em cima, texto embaixo, tudo centralizado */
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.secao-intro-colecao .titulo-secao p,
+.secao-intro-portfolio .titulo-secao p {
+    max-width: 100%;
+}
+
+
+/* Sub-seções que vêm logo após a introdução da coleção
+   não precisam repetir o espaço do topo */
+.secao-sem-topo {
+    padding-top: 40px;
+}
+
+@media (max-width: 768px) {
+
+    .secao-intro-colecao,
+    .secao-intro-portfolio {
+        padding: 90px 8% 10px;
+    }
+
+    .secao-sem-topo {
+        padding-top: 30px;
+    }
+}
